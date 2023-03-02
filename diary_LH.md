@@ -8,9 +8,12 @@
 #### Ziel: 
 * Gruppeneinteilung & erste Recherchen 
 
-
 #### Probleme & Lösungsvorschläge:  
 * /
 
 #### Ergebnis: 
-* Die Gruppen wurden eingeteilt und die ganzen Github Repos usw. wurden erstellt. 
+* Die Gruppen wurden eingeteilt und die ganzen Github Repos usw. wurden erstellt.
+* Danach wurde recherchiert und dabei kam heraus, dass wir wahrscheinlich mit     Electron arbeiten werden
+
+#### Links: 
+* Tutorial: https://youtu.be/u72CCP4Ae8s
