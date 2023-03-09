@@ -30,7 +30,7 @@
 #### Ergebnis: 
 * Einträge ins Pflichtenheft gemacht
 * erste App gemacht mit Electron
-![First_APP](first_App)
+![First_APP](first_App.png)
 
 #### Links: 
 
