@@ -17,3 +17,22 @@
 
 #### Links: 
 * Tutorial: https://youtu.be/u72CCP4Ae8s
+
+
+### 9.3.2023 (09:45 - 13:15): 
+
+#### Ziel: 
+*  Pfilchtenheft bearbeiten und recherche zu Electron. 
+
+#### Probleme & Lösungsvorschläge:  
+* /
+
+#### Ergebnis: 
+* Einträge ins Pflichtenheft gemacht
+* erste App gemacht mit Electron
+
+![First_APP](pics\first_App.png)
+
+#### Links: 
+* Electron Start Tutorial: https://www.electronjs.org/de/docs/latest/tutorial/quick-start
+
