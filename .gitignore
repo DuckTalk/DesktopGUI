@@ -102,6 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+<<<<<<< HEAD
 
 # out-folder
 out/
+=======
+>>>>>>> 02d1cc3e0a921ae4eab65f66728d14c93627b855
