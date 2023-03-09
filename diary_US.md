@@ -15,5 +15,21 @@
 #
 
 ### Ergebnis: 
-* DesktopGUI
+* DesktopGUI gruppe
+#
+#
+
+### 09.03.2023 (09:40 - 13:15): 
+
+### Ziel: 
+* Electorn einrichten
+* Mockup erstellen
+#
+
+### Probleme & Lösungsvorschläge:  
+
+#
+
+### Ergebnis: 
+* 
 #
