@@ -1,0 +1,71 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div class="user-menu">
+            <img src="user.png" alt="User Image">
+            <span>Username</span>
+        </div>
+    </header>
+    <main>
+        <nav class="contacts">
+            <h2>Contacts</h2>
+            <ul>
+                <li><a href="#">Contact 1</a></li>
+                <li><a href="#">Contact 2</a></li>
+                <li><a href="#">Contact 3</a></li>
+                <li><a href="#">Contact 4</a></li>
+            </ul>
+        </nav>
+        <section class="chat">
+            <div class="contact-info">
+                <div class="profile-pic">
+                    <img src="profile-pic.png" alt="Profile Picture"><h2>Contact Name</h2>
+                </div>
+                
+            </div>
+            <div class="messages">
+                <div class="message received">
+                    <p>Hello, how are you?</p>
+                    <span class="timestamp">10:00 AM</span>
+                </div>
+                <div class="message sent">
+                    <p>Hi, I'm good thanks. How about you?</p>
+                    <span class="timestamp">10:05 AM</span>
+                </div>
+                <div class="message received">
+                    <p>I'm good too, thanks for asking.</p>
+                    <span class="timestamp">10:10 AM</span>
+                </div>
+            </div>
+            <form class="message-form">
+                <input type="text" placeholder="Type a message...">
+                <button>Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
