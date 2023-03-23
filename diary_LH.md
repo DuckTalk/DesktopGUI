@@ -36,3 +36,18 @@
 #### Links: 
 * Electron Start Tutorial: https://www.electronjs.org/de/docs/latest/tutorial/quick-start
 
+
+### 23.3.2023 (09:45 - 13:15): 
+
+#### Ziel: 
+*  An der Login Page arbeiten 
+
+#### Probleme & Lösungsvorschläge:  
+* 
+
+#### Ergebnis: 
+* 
+
+#### Links: 
+* 
+
