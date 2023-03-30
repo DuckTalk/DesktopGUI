@@ -43,11 +43,11 @@
 *  An der Login Page arbeiten 
 
 #### Probleme & Lösungsvorschläge:  
-* 
+* /
 
 #### Ergebnis: 
-* 
+* Das Design der Login Page ist fertig.
 
 #### Links: 
-* 
+* /
 
