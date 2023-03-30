@@ -5,8 +5,8 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://ableytner.ddns.net:2006">
     <title>WhatsApp Web App</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -52,12 +52,12 @@
                 </div>
             </div>
             <form class="message-form">
-                <input type="text" placeholder="Type a message...">
-                <button>Send</button>
+                <input type="text" placeholder="Type a message..." id="message-input">
+                <button id="send-button">Send</button>
             </form>
         </section>
     </main>
-    
+
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
