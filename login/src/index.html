@@ -9,6 +9,7 @@
   <!DOCTYPE html>
 
     <title>Login Page </title>
+
   </head>
   <body>
     <h1>DuckTalk <img src="icon.png" alt="DuckTalk logo" class="small_pic"></h1>
@@ -24,6 +25,37 @@
 
       <button type="submit">Login</button>
     </form>
+    <script>
+  const { net } = require('electron');
+
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const request = net.request({
+      method: 'POST',
+      url: 'http://ableytner.ddns.net:2006/api/user',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    request.on('response', (response) => {
+      // Handle response from server
+    });
+
+    const data = JSON.stringify({
+      email: email,
+      password: password
+    });
+
+    request.write(data);
+    request.end();
+  });
+  </script>
   </body>
 
 </html>
