@@ -33,9 +33,9 @@
 ### Ergebnis: 
 * Electron eingerichtet(tutorial)
 terminal:
-npm install --save-dev @electron-forge/cli
-npx electron-forge import
-npm run make
+* npm install --save-dev @electron-forge/cli
+* npx electron-forge import
+* npm run make
 #
 
 ### 23.03.2023 (09:40 - 13:15): 
