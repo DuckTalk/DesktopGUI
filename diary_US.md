@@ -32,4 +32,22 @@
 
 ### Ergebnis: 
 * Electron eingerichtet(tutorial)
+terminal:
+* npm install --save-dev @electron-forge/cli
+* npx electron-forge import
+* npm run make
+#
+
+### 23.03.2023 (09:40 - 13:15): 
+
+### Ziel: 
+* Grobes Design für die Landing page in html und css
+#
+
+### Probleme & Lösungsvorschläge:  
+
+#
+
+### Ergebnis: 
+![loginpage](/pics/landingpage_design.jpg)
 #
