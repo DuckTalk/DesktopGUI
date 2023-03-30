@@ -37,6 +37,8 @@ terminal:
 * npx electron-forge import
 * npm run make
 #
+* npm install electron-reload --save-dev
+* npm run start-dev
 
 ### 23.03.2023 (09:40 - 13:15): 
 
