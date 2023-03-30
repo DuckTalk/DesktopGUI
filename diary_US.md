@@ -51,3 +51,19 @@ terminal:
 ### Ergebnis: 
 ![loginpage](/pics/landingpage_design.jpg)
 #
+
+### 30.03.2023 (09:40 - 13:15): 
+
+### Ziel: 
+* API requests
+#
+
+### Probleme & Lösungsvorschläge:  
+* Policies
+#
+
+### Ergebnis: 
+* GET geht mit send button
+* POST mit post button
+#
+
