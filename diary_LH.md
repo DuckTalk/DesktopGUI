@@ -51,3 +51,15 @@
 #### Links: 
 * /
 
+
+### 30.3.2023 (09:45 - 13:15):
+
+#### Ziel: 
+*  Login POST Request 
+
+#### Ergebnis: 
+* POST Requests zur API sind möglich. 
+
+##### Commands 
+* npm install electron-reload --save-dev
+* npm run start-dev
