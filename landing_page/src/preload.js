@@ -1,10 +1,9 @@
-// preload.js
 
 const { ipcRenderer } = require('electron');
 
 window.addEventListener('DOMContentLoaded', () => {
   const messageForm = document.querySelector('.message-form');
-
+/*
   messageForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -18,4 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error(error));
   });
+  */
 });
