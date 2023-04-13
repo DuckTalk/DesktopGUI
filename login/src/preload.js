@@ -1,35 +1,34 @@
-// preload.js
+import axios from 'axios';
 
-const { ipcRenderer } = require('electron');
-
-window.addEventListener('DOMContentLoaded', () => {
-const sendButton = document.getElementById('send-button');
-
-sendButton.addEventListener('click', function() {
-// Make an HTTP request to the API endpoint
-const apiUrl = 'http://ableytner.ddns.net:2006/api/user';
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
-fetch(apiUrl, {
-  method: 'POST',
-  headers: {
-      'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
+export default {
+  data() {
+    return {
       type: 'user',
-      data: {
-        username: 'testuser',
-        email: 'test@gmail.com',
-        pw_hash: 'empty1',
-        salt: '1h2jk2n'
-      }
-  })
-})
-.then(response => response.json())
-.then(data => {
-  // Send the data back to the main process
-  ipcRenderer.send('api-response', data);
-})
-.catch(error => console.error(error));
-});
-})
+      auth: JSON.stringify({
+        type: "token",
+        token: ""
+      }),
+      data: JSON.stringify({
+        user_id: 1
+      })
+    };
+  },
+  methods: {
+    handleSubmit() {
+      // Call the get_responds method when the form is submitted
+      this.get_responds();
+
+      // Do something with email and password values
+    },
+    get_responds() {
+      axios.get('/api/home')
+        .then((response) => {
+          console.log("Axios Response: ", response);
+          console.log("Hallo");
+        })
+        .catch(function (error) {
+          console.error("Axios Error", error);
+        });
+    }
+  }
+};
