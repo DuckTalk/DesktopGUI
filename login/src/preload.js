@@ -16,8 +16,13 @@ fetch(apiUrl, {
       'Content-Type': 'application/json'
   },
   body: JSON.stringify({
-      email: email,
-      password: password
+      type: 'user',
+      data: {
+        username: 'testuser',
+        email: 'test@gmail.com',
+        pw_hash: 'empty1',
+        salt: '1h2jk2n'
+      }
   })
 })
 .then(response => response.json())

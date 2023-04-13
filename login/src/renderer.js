@@ -1,4 +1,4 @@
-const sendButton = document.getElementById('send-button');
+/*const sendButton = document.getElementById('send-button');
 
 sendButton.addEventListener('click', function() {
     // Make a GET request to the API endpoint
@@ -7,4 +7,4 @@ sendButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error));
-});
+});*/

@@ -63,3 +63,12 @@
 ##### Commands 
 * npm install electron-reload --save-dev
 * npm run start-dev
+
+
+### 30.3.2023 (09:45 - 13:15):
+
+#### Ziel: 
+*  Requests  
+
+#### Ergebnis: 
+*  
