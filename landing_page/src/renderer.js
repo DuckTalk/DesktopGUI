@@ -5,6 +5,47 @@ const getUserButton = document.getElementById('get-user-button');
 const messageInput = document.getElementById('message-input');
 const contactButton = document.getElementById('contact-button');
 const chatButton = document.getElementById('chat-button');
+const apiUrl = 'http://ableytner.ddns.net:2006/api/group/test';
+
+// Function to fetch member details by user_id
+function fetchMemberDetails(memberId) {
+  const url = `http://ableytner.ddns.net:2006/api/user/${memberId}`;
+  return fetch(url).then(response => response.json());
+}
+
+// Make a GET request to the API endpoint to get the group information
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    // Create an HTML element to display the group name
+    const groupNameElement = document.createElement('h2');
+    groupNameElement.innerHTML = `${data.data.groupname}`;
+    document.getElementById('group-contacts').appendChild(groupNameElement);
+
+    // Create an HTML element to display the group description
+    const groupDescriptionElement = document.createElement('p');
+    groupDescriptionElement.innerHTML = `${data.data.description}`;
+    document.getElementById('group-contacts').appendChild(groupDescriptionElement);
+
+    // Loop through the members and fetch their details
+    const memberIds = data.data.members.map(member => member.user_id);
+    const memberDetailsPromises = memberIds.map(fetchMemberDetails);
+    return Promise.all(memberDetailsPromises);
+  })
+  .then(memberDetails => {
+    // Create an HTML element to display the members
+    const membersElement = document.createElement('ul');
+    for (const member of memberDetails) {
+      const memberElement = document.createElement('li');
+      memberElement.innerHTML = `${member.data.username}`;
+      membersElement.appendChild(memberElement);
+    }
+    document.getElementById('group-contacts').appendChild(membersElement);
+  })
+  .catch(error => console.error(error));
+
+
+
 
 sendButton.addEventListener('click', function(event) {
     event.preventDefault();
