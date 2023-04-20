@@ -65,7 +65,7 @@
 * npm run start-dev
 
 
-### 30.3.2023 (09:45 - 13:15):
+### 13.4.2023 (09:45 - 13:15):
 
 #### Ziel: 
 *  Requests 
@@ -73,3 +73,12 @@
 #### Ergebnis: 
 *  Es hat funktioniert einen User in der Datenbank anzulegen (POST), aber das GET hat nicht funktioniert. 
 * Wir werden aber wahrscheinlich das ganze von Fetch auf Axios umschreiben, weil dann das GET besser funktioniert und es mit den anderen           kompatibler ist
+
+
+### 20.4.2023 (09:45 - 13:15):
+
+#### Ziel: 
+*  Requests & Design von Login Page 
+
+#### Ergebnis: 
+* Design ist fertig. 
