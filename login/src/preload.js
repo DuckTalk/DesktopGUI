@@ -7,7 +7,7 @@ const sendButton = document.getElementById('login-button');
 
 sendButton.addEventListener('click', function() {
 // Make an HTTP request to the API endpoint
-const apiUrl = 'http://ableytner.ddns.net:2006/api/user/test2';
+const apiUrl = 'http://ableytner.ddns.net:2006/api/message/test2';
 const email = document.getElementById('email').value;
 const password = document.getElementById('password').value;
 /*fetch(apiUrl, {
