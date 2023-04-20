@@ -68,4 +68,19 @@ terminal:
 * GET geht mit send button
 * POST mit post button
 #
+### 13.04.2023 (09:40 - 13:15): 
 
+### Ziel: 
+* API requests
+* dummy chat
+#
+
+### Probleme & Lösungsvorschläge:  
+* backend seite noch keine dummy chat funktion
+* Im get kann kein body mitgegeben werden
+#
+
+### Ergebnis: 
+* Post funktioniert
+* Get nicht
+#
