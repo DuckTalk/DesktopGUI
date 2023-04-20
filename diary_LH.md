@@ -82,3 +82,6 @@
 
 #### Ergebnis: 
 * Design ist fertig. 
+
+#### Merken:
+* Login Design vielleicht nochmal überarbeiten. Z.B. Weißes Feld dahinter einfügen

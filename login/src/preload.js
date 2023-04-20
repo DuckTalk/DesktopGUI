@@ -56,3 +56,18 @@ fetch(apiUrl, {
 .catch(error => console.error(error));
 });
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+  const passwordInput = document.getElementById("password");
+  const toggleButton = document.getElementById("toggle-password");
+
+  toggleButton.addEventListener("click", function() {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.textContent = "Hide password";
+    } else {
+      passwordInput.type = "password";
+      toggleButton.textContent = "Show password";
+    }
+  });
+});

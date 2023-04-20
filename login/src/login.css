@@ -35,8 +35,8 @@ input {
 }
 
 
-button {
-  background-color: #075e54;
+#login-button {
+  background-color: #306ca5;
   color: white;
   border: none;
   padding: 15px 25px;
@@ -89,4 +89,15 @@ button:hover {
 .form-group {
   position: relative;
   margin-top: 50px;
+}
+
+#toggle-password {
+  background-color: #306ca5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
