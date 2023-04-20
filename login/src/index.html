@@ -7,27 +7,30 @@
     <link rel="stylesheet" href="login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://ableytner.ddns.net:2006">
-
+  <div class="login-container">
   <!DOCTYPE html>
 
     <title>Login Page </title>
 
   </head>
   <body>
-    <h1>DuckTalk <img src="icon.png" alt="DuckTalk logo" class="small_pic"></h1>
+  <div>
+    <h1>DuckTalk </h1>
     <form>
-      <label for="email">Email:</label>
+    <div class="form-group">
+      <label for="email" class="middleline">Email:</label>
+      <br>
 
       <input type="email" id="email" name="email" required>
-
       <br>
-      <label for="password">Password:</label>
+      <label for="password" class="middleline">Password:</label>
+      <br>
       <input type="password" id="password" name="password" required>
       <br>
-
+    </div>
       <button id="login-button" type="submit">Login</button>
     </form>
     <script src="./renderer.js"></script>
   </body>
-
+  </div>
 </html>
