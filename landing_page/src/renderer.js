@@ -73,7 +73,7 @@ getUserButton.addEventListener('click', function(event) {
     */
     event.preventDefault();
     // Make a GET request to the API endpoint
-    const apiUrl = 'http://ableytner.ddns.net:2006/api/user/test1';
+    const apiUrl = 'http://ableytner.ddns.net:2006/api/group/test';
     fetch(apiUrl, {
         method: 'GET',
         headers: {
