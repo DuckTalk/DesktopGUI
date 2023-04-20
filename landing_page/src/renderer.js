@@ -3,8 +3,8 @@ const postButton = document.getElementById('post-button');
 const loginButton = document.getElementById('login-button');
 const getUserButton = document.getElementById('get-user-button');
 const messageInput = document.getElementById('message-input');
-const contactButton = document.getElementById('contact-button');
 const chatButton = document.getElementById('chat-button');
+const contactButton = document.getElementById('contact-button');
 const apiUrl = 'http://ableytner.ddns.net:2006/api/group/test';
 
 // Function to fetch member details by user_id
@@ -45,6 +45,16 @@ fetch(apiUrl)
   .catch(error => console.error(error));
 
 
+contactButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = "contact.html";
+});
+
+
+chatButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = 'index.html';
+});
 
 
 sendButton.addEventListener('click', function(event) {
@@ -137,14 +147,3 @@ getUserButton.addEventListener('click', function(event) {
     .catch(error => console.error(error));
 });
 
-
-
-contactButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    window.location.href = 'contact.html';
-});
-
-chatButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    window.location.href = 'index.html';
-});
