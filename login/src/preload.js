@@ -1,14 +1,58 @@
 // preload.js
+const loginButton = document.getElementById('login-button');
+const { ipcRenderer } = require('electron');
 
-// All the Node.js APIs are available in the preload process.
-// It has the same sandbox as a Chrome extension.
 window.addEventListener('DOMContentLoaded', () => {
-    const replaceText = (selector, text) => {
-      const element = document.getElementById(selector)
-      if (element) element.innerText = text
-    }
+const sendButton = document.getElementById('login-button');
 
-    for (const dependency of ['chrome', 'node', 'electron']) {
-      replaceText($,{dependency}-version, process.versions[dependency])
-    }
+sendButton.addEventListener('click', function() {
+// Make an HTTP request to the API endpoint
+const apiUrl = 'http://ableytner.ddns.net:2006/api/message/test2';
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+/*fetch(apiUrl, {
+  method: 'POST',
+  headers: {
+      'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+      type: 'user',
+      data: {
+        username: 'testuser',
+        email: 'test@gmail.com',
+        pw_hash: 'empty1',
+        salt: '1h2jk2n'
+      }
   })
+})
+
+.then(response => response.json())
+.then(data => console.log('api-response', data))
+.catch(error => console.error(error));
+*/
+fetch(apiUrl, {
+  method: 'GET',
+  headers: {
+      'Content-Type': 'application/json'
+  },
+  json: JSON.stringify({
+      type: 'user',
+      auth: {
+        type: 'token',
+        token: ''
+      },
+      data: {
+        user_id: 1
+      }
+
+  })
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data); // log the response data to the console
+  // Send the data back to the main process
+  ipcRenderer.send('api-response', data);
+})
+.catch(error => console.error(error));
+});
+})
