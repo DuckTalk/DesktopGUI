@@ -84,3 +84,17 @@ terminal:
 * Post funktioniert
 * Get nicht
 #
+
+### 04.05.2023 (09:40 - 13:15): 
+
+### Ziel: 
+* zwischen chat und contact wechseln
+#
+
+### Probleme & Lösungsvorschläge:  
+* jeweils ein button war auf der anderen seite nicht gesetzt deswegen gab es ein problem
+#
+
+### Ergebnis: 
+* navigieren zwischen seiten möglich
+#
