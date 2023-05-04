@@ -51,3 +51,17 @@
 #### Links: 
 * 
 
+
+### 4.5.2023 (09:45 - 13:15): 
+
+#### Ziel: 
+*  Contact List Page
+
+#### Probleme & Lösungsvorschläge:  
+* 
+
+#### Ergebnis: 
+* 
+
+#### Links: 
+* 
