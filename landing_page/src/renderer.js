@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const getUserButton = document.getElementById('get-user-button');
     const messageInput = document.getElementById('message-input');
 
+
     const apiUrl = 'http://ableytner.ddns.net:2006/api/group/test';
 
     // Function to fetch member details by user_id
@@ -14,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const url = `http://ableytner.ddns.net:2006/api/user/${memberId}`;
     return fetch(url).then(response => response.json());
     }
-
+    
+    // Make a GET request to the API endpoint to get the group information
     // Make a GET request to the API endpoint to get the group information
     fetch(apiUrl)
     .then(response => response.json())
@@ -35,20 +37,27 @@ document.addEventListener('DOMContentLoaded', function() {
         return Promise.all(memberDetailsPromises);
     })
     .then(memberDetails => {
-        // Create an HTML element to display the members
-        const membersElement = document.createElement('ul');
-        for (const member of memberDetails) {
-        const memberElement = document.createElement('li');
-        memberElement.innerHTML = `${member.data.username}`;
-        membersElement.appendChild(memberElement);
+        // Check that memberDetails is an array
+        if (Array.isArray(memberDetails)) {
+            // Create an HTML element to display the members
+            const membersElement = document.createElement('ul');
+            for (const member of memberDetails) {
+                const memberElement = document.createElement('li');
+                memberElement.innerHTML = `${member.data.username}`;
+                membersElement.appendChild(memberElement);
+            }
+            document.getElementById('group-contacts').appendChild(membersElement);
+        } else {
+            console.error('Member details is not an array:', memberDetails);
         }
-        document.getElementById('group-contacts').appendChild(membersElement);
     })
     .catch(error => console.error(error));
 
 
 
-    /*
+
+
+
     sendButton.addEventListener('click', function(event) {
         event.preventDefault();
         // Make a GET request to the API endpoint
@@ -103,21 +112,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
     });
-    
     getUserButton.addEventListener('click', function(event) {
-        /*
         event.preventDefault();
         // Make a GET request to the API endpoint
-        const apiUrl = 'http://ableytner.ddns.net:2006/api/user/test1';
-        fetch(apiUrl)
+        const apiUrluser = 'http://ableytner.ddns.net:2006/api/user/test1';
+        fetch(apiUrluser)
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.error(error));
         
         event.preventDefault();
         // Make a GET request to the API endpoint
-        const apiUrl = 'http://ableytner.ddns.net:2006/api/group/test';
-        fetch(apiUrl, {
+        const apiUrlgroup = 'http://ableytner.ddns.net:2006/api/group/test';
+        fetch(apiUrlgroup, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -140,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    */
+    
     const contactButton = document.getElementById("contact-button");
 
     contactButton.addEventListener('click', function(event) {
