@@ -58,10 +58,7 @@
 *  Contact List Page
 
 #### Probleme & Lösungsvorschläge:  
-* 
+* Probleme bei den Requests für die Contacts
 
 #### Ergebnis: 
-* 
-
-#### Links: 
-* 
+* Design mehr oder weniger fertig, aber die requests funktionieren nicht 
