@@ -12,52 +12,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to fetch member details by user_id
     function fetchMemberDetails(memberId) {
-    const url = `http://ableytner.ddns.net:2006/api/user/${memberId}`;
-    return fetch(url).then(response => response.json());
+        const url = `http://ableytner.ddns.net:2006/api/user/${memberId}`;
+        return fetch(url).then(response => response.json());
     }
     
     // Make a GET request to the API endpoint to get the group information
-    // Make a GET request to the API endpoint to get the group information
     fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-        // Create an HTML element to display the group name
-        const groupNameElement = document.createElement('h2');
-        groupNameElement.innerHTML = `${data.data.groupname}`;
-        document.getElementById('group-contacts').appendChild(groupNameElement);
+        .then(response => response.json())
+        .then(data => {
+            // Create an HTML element to display the group name
+            const groupNameElement = document.createElement('h2');
+            groupNameElement.innerHTML = `${data.data.groupname}`;
+            document.getElementById('group-contacts').appendChild(groupNameElement);
+    
+            // Create an HTML element to display the group description
+            const groupDescriptionElement = document.createElement('p');
+            groupDescriptionElement.innerHTML = `${data.data.description}`;
+            document.getElementById('group-contacts').appendChild(groupDescriptionElement);
+    
+            // Extract member IDs from the members object
+            const memberIds = [...Object.values(data.data.members).map(member => member.user_id)];
+    
+            // Fetch member details for each member ID
+            const memberDetailsPromises = memberIds.map(fetchMemberDetails);
+            return Promise.all(memberDetailsPromises);
+        })
+        .then(memberDetails => {
+            // Check that memberDetails is an array
+            if (Array.isArray(memberDetails)) {
+                // Create an HTML element to display the members
+                const membersElement = document.createElement('ul');
+                for (const member of memberDetails) {
+                    const memberElement = document.createElement('li');
+                    memberElement.innerHTML = `${member.data.username}`;
+                    membersElement.appendChild(memberElement);
+                }
+                document.getElementById('group-contacts').appendChild(membersElement);
+                console.error('Output:', memberDetails);
 
-        // Create an HTML element to display the group description
-        const groupDescriptionElement = document.createElement('p');
-        groupDescriptionElement.innerHTML = `${data.data.description}`;
-        document.getElementById('group-contacts').appendChild(groupDescriptionElement);
-
-        // Loop through the members and fetch their details
-        const memberIds = data.data.members.map(member => member.user_id);
-        const memberDetailsPromises = memberIds.map(fetchMemberDetails);
-        return Promise.all(memberDetailsPromises);
-    })
-    .then(memberDetails => {
-        // Check that memberDetails is an array
-        if (Array.isArray(memberDetails)) {
-            // Create an HTML element to display the members
-            const membersElement = document.createElement('ul');
-            for (const member of memberDetails) {
-                const memberElement = document.createElement('li');
-                memberElement.innerHTML = `${member.data.username}`;
-                membersElement.appendChild(memberElement);
+            } else {
+                console.error('Member details is not an array:', memberDetails);
             }
-            document.getElementById('group-contacts').appendChild(membersElement);
-        } else {
-            console.error('Member details is not an array:', memberDetails);
-        }
-    })
-    .catch(error => console.error(error));
-
-
-
-
-
-
+        })
+        .catch(error => console.error(error));
+        
     sendButton.addEventListener('click', function(event) {
         event.preventDefault();
         // Make a GET request to the API endpoint
@@ -67,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => console.log(data))
         .catch(error => console.error(error));
     });
-
+    
     postButton.addEventListener('click', function(event) {
         event.preventDefault();
         // Make a POST request to the API endpoint
