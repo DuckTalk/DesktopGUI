@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const apiUrl = 'http://ableytner.ddns.net:2006/api/group/test';
-
+1
     // Function to fetch member details by user_id
     function fetchMemberDetails(memberId) {
         const url = `http://ableytner.ddns.net:2006/api/user/${memberId}`;
