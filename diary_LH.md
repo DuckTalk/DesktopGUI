@@ -85,3 +85,15 @@
 
 #### Merken:
 * Login Design vielleicht nochmal überarbeiten. Z.B. Weißes Feld dahinter einfügen
+
+
+### 15.6.2023 (09:45 - 13:15):
+
+#### Ziel: 
+*  Überprüfen ob eingegebene E-Mail in Datenbank existiert
+
+#### Ergebnis: 
+*  
+
+#### Merken:
+* 
