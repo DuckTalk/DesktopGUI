@@ -93,7 +93,7 @@
 *  Überprüfen ob eingegebene E-Mail in Datenbank existiert
 
 #### Ergebnis: 
-*  
+*  Das Überprüfen funktioniert, wenn es die Email nicht gibt kommt eine Fehlermeldung
 
 #### Merken:
-* 
+* Code mit Landingpage zusammenbringen und dann von Login-Button darauf redirecten
