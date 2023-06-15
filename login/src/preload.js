@@ -12,7 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
       method: 'GET'
     })
       .then(response => response.json())
-      .then(data => console.log('api-response', data))
+      .then((data) => {
+        console.log('api-response', data)
+        if(data["error"]){
+          console.log("Email not found")
+        }
+      })
       .catch(error => console.error(error));
   });
 
