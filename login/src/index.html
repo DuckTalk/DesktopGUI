@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://ableytner.ddns.net:2006">
-  <div class="login-container">
-  <!DOCTYPE html>
-
-    <title>Login Page </title>
-
+    <script src="password-toggle.js"></script>
   </head>
   <body>
-  <div>
-   
-    <form>
-    <div class="form-group"> 
-      <h1>DuckTalk </h1>
-      <label for="email" class="middleline">Email</label>
-      <br>
+    <div class="login-container">
+      <form>
+        <div class="form-group"> 
+          <h1>DuckTalk </h1>
+          <label for="email" class="middleline">Email</label>
+          <br>
+          <input type="email" id="emailInput" name="email" required>
+          <br>
 
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="password" class="middleline">Password</label>
-      <br>
-      <input type="password" id="password" name="password" required>
-      <br>
+          <label for="password" class="middleline">Password</label>
+          <br>
+          <div>
+            <input type="password" id="password" name="password" required>
+          <br>
+          
+            <button id="toggle-password">Show password</button>
+            <br>
+            <button id="login-button" type="submit">Login</button>
+
+          </div>
+          <br>
+        </div>
+      </form>
     </div>
-      <button id="login-button" type="submit">Login</button>
-    </form>
-    <script src="./renderer.js"></script>
   </body>
-  </div>
 </html>

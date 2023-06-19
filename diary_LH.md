@@ -82,3 +82,18 @@
 
 #### Ergebnis: 
 * Design ist fertig. 
+
+#### Merken:
+* Login Design vielleicht nochmal überarbeiten. Z.B. Weißes Feld dahinter einfügen
+
+
+### 15.6.2023 (09:45 - 13:15):
+
+#### Ziel: 
+*  Überprüfen ob eingegebene E-Mail in Datenbank existiert
+
+#### Ergebnis: 
+*  Das Überprüfen funktioniert, wenn es die Email nicht gibt kommt eine Fehlermeldung
+
+#### Merken:
+* Code mit Landingpage zusammenbringen und dann von Login-Button darauf redirecten

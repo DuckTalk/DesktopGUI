@@ -1,58 +1,36 @@
-// preload.js
-const loginButton = document.getElementById('login-button');
+/* preload.js */
 const { ipcRenderer } = require('electron');
 
-window.addEventListener('DOMContentLoaded', () => {
-const sendButton = document.getElementById('login-button');
+document.addEventListener("DOMContentLoaded", function () {
+  const sendButton = document.getElementById('login-button');
+  sendButton.addEventListener('click', function () {
+    // Make an HTTP request to the API endpoint
+    const apiUrl = 'http://ableytner.ddns.net:2006/api/user/';
+    const email = document.getElementById('emailInput').value;
 
-sendButton.addEventListener('click', function() {
-// Make an HTTP request to the API endpoint
-const apiUrl = 'http://ableytner.ddns.net:2006/api/message/test2';
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
-/*fetch(apiUrl, {
-  method: 'POST',
-  headers: {
-      'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-      type: 'user',
-      data: {
-        username: 'testuser',
-        email: 'test@gmail.com',
-        pw_hash: 'empty1',
-        salt: '1h2jk2n'
-      }
-  })
-})
+    fetch(apiUrl + email, {
+      method: 'GET'
+    })
+      .then(response => response.json())
+      .then((data) => {
+        console.log('api-response', data)
+        if(data["error"]){
+          console.log("Email not found")
+        }
+      })
+      .catch(error => console.error(error));
+  });
 
-.then(response => response.json())
-.then(data => console.log('api-response', data))
-.catch(error => console.error(error));
-*/
-fetch(apiUrl, {
-  method: 'GET',
-  headers: {
-      'Content-Type': 'application/json'
-  },
-  json: JSON.stringify({
-      type: 'user',
-      auth: {
-        type: 'token',
-        token: ''
-      },
-      data: {
-        user_id: 1
-      }
+  const passwordInput = document.getElementById("password");
+  const toggleButton = document.getElementById("toggle-password");
 
-  })
-})
-.then(response => response.json())
-.then(data => {
-  console.log(data); // log the response data to the console
-  // Send the data back to the main process
-  ipcRenderer.send('api-response', data);
-})
-.catch(error => console.error(error));
+  toggleButton.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.textContent = "Hide password";
+    } else {
+      passwordInput.type = "password";
+      toggleButton.textContent = "Show password";
+    }
+  });
 });
-})
