@@ -147,4 +147,29 @@ main {
     background-color: #f5f5f5;
 }
 
+#contact-button {
+    float: left;
+    margin-right: 10px;
+  }
 
+#chat-button {
+    float: left;
+    margin-right: 10px;
+  }
+  
+/* style.css */
+
+/* Add this CSS rule to set the width and height of the user image */
+.user-menu img, .contacts li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Add this CSS rule to position the user image next to the contact name */
+.contacts li {
+    display: flex;
+    align-items: center;
+  }
+  

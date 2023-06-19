@@ -15,6 +15,8 @@
         <div class="search-bar">
             <input type="text" placeholder="Search">
             <button>Search</button>
+            <button id="contact-button">Contact</button>
+            <button id="chat-button">Chat</button>
         </div>
         <div class="user-menu">
             <img src="user.png" alt="User Image">
@@ -22,13 +24,27 @@
         </div>
     </header>
     <main>
+        <div id="group-contacts"></div>
+
         <nav class="contacts">
             <h2>Contacts</h2>
             <ul>
-                <li><a href="#">Contact 1</a></li>
-                <li><a href="#">Contact 2</a></li>
-                <li><a href="#">Contact 3</a></li>
-                <li><a href="#">Contact 4</a></li>
+                <li>
+                    <img src="user.png" alt="User Image">
+                    <a href="#">Contact 1</a>
+                </li>
+                <li>
+                    <img src="user.png" alt="User Image">
+                    <a href="#">Contact 2</a>
+                </li>
+                <li>
+                    <img src="user.png" alt="User Image">
+                    <a href="#">Contact 3</a>
+                </li>
+                <li>
+                    <img src="user.png" alt="User Image">
+                    <a href="#">Contact 4</a>
+                </li>
             </ul>
         </nav>
         <section class="chat">
@@ -53,10 +69,12 @@
             </div>
             <div id="response-div"></div> <!-- add this line to create an element where you want to display the response -->
             <form class="message-form">
-            <form class="message-form">
                 <input type="text" placeholder="Type a message..." id="message-input">
                 <button type="submit "id="send-button">Send</button>
                 <button id="post-button">post</button>
+                <button id="login-button">post</button>
+                <button id="get-user-button" type="button">Get User</button>
+
 
             </form>
         </section>
