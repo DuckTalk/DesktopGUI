@@ -14,8 +14,8 @@ function createWindow() {
     }
   })
 
-  // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  // and load the index_login.html of the app.
+  mainWindow.loadFile('index_login.html')
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
@@ -23,8 +23,13 @@ function createWindow() {
   // Handle API response from renderer process
   ipcMain.on('api-response', (event, arg) => {
     console.log(arg)
+    if (arg.success && arg.redirect) {
+      // Redirect to index.html
+      mainWindow.loadFile('index.html');
+    }
   })
 }
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

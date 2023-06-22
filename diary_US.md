@@ -98,3 +98,18 @@ terminal:
 ### Ergebnis: 
 * navigieren zwischen seiten möglich
 #
+
+### 22.06.2023 (09:40 - 13:15): 
+
+### Ziel: 
+* nach login auf die index weitergeleitet werden
+#
+
+### Probleme & Lösungsvorschläge:  
+* 
+#
+
+### Ergebnis: 
+* navigieren zwischen seiten möglich
+* login wird erkannt
+#

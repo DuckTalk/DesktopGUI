@@ -105,11 +105,16 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data);
+            if (data.success) {
+                // Redirect to index.html
+                window.location.href = "index.html";
+            }
+        })
         .catch(error => console.error(error));
-
-        
     });
+    
     getUserButton.addEventListener('click', function(event) {
         event.preventDefault();
         // Make a GET request to the API endpoint
