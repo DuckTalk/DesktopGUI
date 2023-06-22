@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
         // Your code goes here
     
-    const sendButton = document.getElementById('send-button');
-    const postButton = document.getElementById('post-button');
-    const loginButton = document.getElementById('login-button');
+
     const getUserButton = document.getElementById('get-user-button');
     const messageInput = document.getElementById('message-input');
 
@@ -55,65 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
         .catch(error => console.error(error));
-        
-    sendButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Make a GET request to the API endpoint
-        const apiUrl = 'http://ableytner.ddns.net:2006/api/user';
-        fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
-    });
-    
-    postButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Make a POST request to the API endpoint
-        const apiUrl = 'http://ableytner.ddns.net:2006/api/user';
-        const requestBody = {
-            message: messageInput.value
-        };
-        fetch(apiUrl, {
-            method: 'POST',
-            body: JSON.stringify(requestBody),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
-    });
-
-    loginButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Make a POST request to the API endpoint
-        const apiUrl = 'http://ableytner.ddns.net:2006/api/user';
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                type: 'user',
-                data: {
-                    username: 'shala',
-                    email: 'test2@gmail.com',
-                    pw_hash: 'empty1',
-                    salt: '1h2jk2n'
-                }
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            if (data.success) {
-                // Redirect to index.html
-                window.location.href = "index.html";
-            }
-        })
-        .catch(error => console.error(error));
-    });
     
     getUserButton.addEventListener('click', function(event) {
         event.preventDefault();
