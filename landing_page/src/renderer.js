@@ -89,6 +89,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+
+
+    const postButton = document.getElementById('sendmessage-button');
+    postButton.addEventListener('click', () => {
+    // Beitrag an das Backend senden
+    const url = 'http://ableytner.ddns.net:2006/api/message';
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify({ 
+            data:{
+                sender_id: 3, 
+                receiver: {
+                    type:"user",
+                    user_id: 4
+                },
+                content: messageInput.value
+            }
+         }),
+        headers: {
+        'Content-Type': 'application/json'
+        }
+    })
+        .then(response => {
+        // Erfolgsfall
+        console.log('Beitrag erfolgreich gesendet');
+        console.log(response.json())
+        })
+        .catch(error => {
+        // Fehlerfall
+        console.error('Fehler beim Senden des Beitrags:', error);
+        });
+    });
     
     const contactButton = document.getElementById("contact-button");
 
