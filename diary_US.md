@@ -110,6 +110,7 @@ terminal:
 #
 
 ### Ergebnis: 
-* navigieren zwischen seiten möglich
 * login wird erkannt
+
+
 #
